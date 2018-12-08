@@ -756,7 +756,7 @@ Footer
       height: 60px; }
 
 .navbar {
-  float: right;
+  float: left;
   padding-top: 25px; }
   .navbar ul:after {
     content: '';
