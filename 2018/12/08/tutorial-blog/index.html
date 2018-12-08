@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="salpid">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="用GitHub Pages + Hexo搭建个人的专属博客">
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Yunhao Zhu">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>用GitHub Pages + Hexo搭建个人的专属博客 - Yunhao Zhu</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            用GitHub Pages + Hexo搭建个人的专属博客
+            
+          </h1>
+          <p class="posted-on">
+          2018-12-08
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/Tutorial/" rel="tag">
+                  Tutorial
+                </a>
+              
+                <a href="/tags/Hexo/" rel="tag">
+                  Hexo
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <p>Create and publish personal blog using GitHub Pages &amp; Hexo framework.<br>如果你也渴望拥有一个属于自己的博客，那么你应该花费一些时间好好阅读本教程。<br><a id="more"></a></p>
+<blockquote>
+<p>学习最好的方法论 —— 就是去做。</p>
+</blockquote>
+<h2 id="什么是-GitHub-Pages"><a href="#什么是-GitHub-Pages" class="headerlink" title="什么是 GitHub Pages?"></a>什么是 GitHub Pages?</h2><p>GitHub Pages 是 GitHub 提供的静态站点托管服务，它可以通过 GitHub 库托管你的个人、组织或项目的站点。<br>你可以使用 Jekyll Theme Chooser 在线创建和部署 GitHub Pages 站点。如果你更喜欢通过本地创建和部署站点，你也可以使用 GitHub Desktop 或者命令行。<br>GitHub Pages 是一种静态网页托管服务，因此不支持 PHP, Ruby, or Python 等服务端代码。<br>本教程使用 Hexo 搭建个人 GitHub Pages，因此如果你想创建和部署组织或项目的网页，部分内容可能会不太适用，需要自行作出调整。</p>
+<blockquote>
+<p>注意：GitHub Pages 站点在互联网上是公开可见的，即便你的托管库是私密的。因此如果在你的网页库中有敏感数据，你可能会想在网页发布前移除它们。</p>
+</blockquote>
+<h2 id="什么是-Hexo"><a href="#什么是-Hexo" class="headerlink" title="什么是 Hexo?"></a>什么是 Hexo?</h2><p>Hexo 是一个快捷、简洁且高效的博客框架。你可以使用 Markdown 书写博文，弹指一挥间 Hexo 就可以利用其精致的主题生成精美的静态博客网页。</p>
+<blockquote>
+<p>Markdown 是一种标记语言，其语法简洁明了、学习容易，而且功能比纯文本更强大。</p>
+</blockquote>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li>下载、安装与配置 Git</li>
+<li>下载与安装 Node.js</li>
+</ol>
+<blockquote>
+<p>什么是 Git ? Git 是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
+</blockquote>
+<p>下载、安装与配置 Git 的具体方式取决于你当前所使用的操作系统。</p>
+<h2 id="基于-Windows-操作系统安装-Git"><a href="#基于-Windows-操作系统安装-Git" class="headerlink" title="基于 Windows 操作系统安装 Git"></a>基于 Windows 操作系统安装 Git</h2><p>下载 <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git for windows</a> 安装程序。由于众所周知的原因，从左侧的链接下载 git for windows 十分缓慢。可以参考<a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">页面</a>，收录了存储于百度云的下载地址。<br>安装完成后，还需要最后一步设置，在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>例如，你的名字为 Yunhao Zhu, 邮箱为 <a href="mailto:1234@qq.com" target="_blank" rel="noopener">1234@qq.com</a> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Yunhao Zhu&quot;</span><br><span class="line">$ git config --global user.email &quot;1234@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="基于-Mac-OS-X-操作系统安装-Git"><a href="#基于-Mac-OS-X-操作系统安装-Git" class="headerlink" title="基于 Mac OS X 操作系统安装 Git"></a>基于 Mac OS X 操作系统安装 Git</h3><p>有三种方法：</p>
+<ol>
+<li>使用 <a href="https://mxcl.github.io/homebrew/" target="_blank" rel="noopener">Homebrew</a>, <a href="https://www.macports.org/" target="_blank" rel="noopener">MacPorts</a>:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>直接从 AppStore 安装 Xcode，Xcode 集成了 Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”-&gt;“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。</p>
+</li>
+<li><p>或者下载 <a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">git for Mac OS X</a> 安装程序。</p>
+</li>
+</ol>
+<h3 id="基于-Linux-操作系统安装-Git"><a href="#基于-Linux-操作系统安装-Git" class="headerlink" title="基于 Linux 操作系统安装 Git"></a>基于 Linux 操作系统安装 Git</h3><ol>
+<li>Linux (Ubuntu, Debian):</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git-core.</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Linux (Fedora, Red Hat, CentOS):</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install git-core.</span><br></pre></td></tr></table></figure>
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><ol>
+<li>下载 <a href="https://nodejs.org/" target="_blank" rel="noopener">安装程序</a> 安装 Node.js</li>
+</ol>
+<blockquote>
+<p>在Windows上安装时务必选择全部组件，包括勾选 Add to Path</p>
+</blockquote>
+<p>安装完成后，请打开命令提示符 cmd 输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>出现 vxx.xx.xx 代表安装成功！</p>
+<ol start="2">
+<li>安装 Node.js 的最佳方式是使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></li>
+</ol>
+<p>cURL:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>Wget:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>安装完成后，重启终端并执行下列命令即可安装 Node.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure>
+<h3 id="第三部：安装-Hexo"><a href="#第三部：安装-Hexo" class="headerlink" title="第三部：安装 Hexo"></a>第三部：安装 Hexo</h3><p>呼，准备工作终于完成了！让我们马上使用 npm 来安装 Hexo，执行如下命令: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，接着执行以下命令: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>例如，你安装在c盘hexo文件夹下，则执行: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init /c/hexo</span><br><span class="line">$ cd /c/hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo generetor</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>什么是 npm?</p>
+<blockquote>
+<p>npm 是 Node.js 的包管理工具（package manager）， 帮助我们管理开发中会用到的各种 Node.js 包，极大的方便了我们的开发。</p>
+</blockquote>
+<p>新建完成后，指定文件夹的目录如下: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>打开浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><ol>
+<li><p>注册 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 账号</p>
+</li>
+<li><p>新建一个 repository 库，Repository name 输入 “Your username.github.io”</p>
+</li>
+<li><p>点击 Settings 下拉至 -&gt; GitHub Pages -&gt; Page name 必须与刚才的库名保持一致 -&gt; 选择一个喜欢的主题 Publish page -&gt; 在地址栏输入你的博客地址即可看到效果</p>
+</li>
+</ol>
+<h3 id="将本地-Hexo-代码部署至-GitHub"><a href="#将本地-Hexo-代码部署至-GitHub" class="headerlink" title="将本地 Hexo 代码部署至 GitHub"></a>将本地 Hexo 代码部署至 GitHub</h3><ol>
+<li>修改本地 Hexo 站点的配置文件 _config.yml，在末尾添加（xxx为你注册的GitHub用户名）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/xxx/xxx.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>利用 npm，上传本地代码，第一次 GitHub 可能会要求你输入用户名和密码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>输入刚才设置的 <a href="https://github.com/xxx/xxx.github.io" target="_blank" rel="noopener">https://github.com/xxx/xxx.github.io</a> 即可查看效果</p>
+<ol start="3">
+<li>发布你的第一篇博客，在根目录下输入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;postname&quot;</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>恭喜你！看到这里，你已经成功掌握了个人博客的搭建技术，教程到这里也就结束了，都是最最基础的内容，关于 GitHub Pages 和 Hexo 还有很多进阶内容等着你去学习。本教程后续也会有更多进阶内容，如果你感兴趣的话，欢迎持续关注。<br>最后，作者水平有限，如有错误、遗漏，欢迎批评指正。</p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-tutorial-blog';
+          this.page.title = '用GitHub Pages + Hexo搭建个人的专属博客';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/2018/12/07/hello-world/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <p>有些话我不会主动告诉你，它藏在箱子里，你必须用心看见野兽的模样，是一只恶狼或是一只绵羊。</p>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/salpid" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Yunhao Zhu &copy; 2018</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 'your-disqus-shortname';
+
+  
+  var disqus_url = 'http://yoursite.com/child/2018/12/08/tutorial-blog/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+</body>
+
+</html>
